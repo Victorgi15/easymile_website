@@ -11,6 +11,19 @@ const IntegrationOperationnelles = () => {
   const eztowVideoRef = useRef<HTMLVideoElement>(null);
   const ezdollyVideoRef = useRef<HTMLVideoElement>(null);
 
+  // Fonction pour le scrolling animé
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 100; // Offset pour tenir compte du header
+      const elementPosition = element.offsetTop - offset;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   useEffect(() => {
     const observerOptions = {
       threshold: 0.5, // Déclenche quand 50% de la vidéo est visible
@@ -118,12 +131,12 @@ const IntegrationOperationnelles = () => {
                   </div>
                 </div>
                 
-                <Link 
-                  href="#eztow-details" 
+                <button 
+                  onClick={() => scrollToSection('eztow-details')}
                   className="inline-block bg-[#37b0a6] text-white px-6 py-3 rounded-md hover:bg-[#2a8a82] transition-colors duration-300"
                 >
                   En savoir plus sur EZTOW
-                </Link>
+                </button>
               </div>
             </motion.div>
 
@@ -177,12 +190,12 @@ const IntegrationOperationnelles = () => {
                   </div>
                 </div>
                 
-                <Link 
-                  href="#ezdolly-details" 
+                <button 
+                  onClick={() => scrollToSection('ezdolly-details')}
                   className="inline-block bg-[#37b0a6] text-white px-6 py-3 rounded-md hover:bg-[#2a8a82] transition-colors duration-300"
                 >
                   En savoir plus sur EZDOLLY
-                </Link>
+                </button>
               </div>
             </motion.div>
           </div>
