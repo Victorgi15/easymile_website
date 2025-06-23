@@ -1,4 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Easymile Website
+
+Site web d'Easymile avec modèles 3D interactifs et pages d'entreprise.
+
+## Technologies utilisées
+
+- [Next.js](https://nextjs.org) - Framework React
+- [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) - Rendu 3D
+- [Three.js](https://threejs.org/) - Bibliothèque 3D
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [TypeScript](https://www.typescriptlang.org/) - Typage statique
+
+## Fonctionnalités
+
+- Modèles 3D interactifs (Ezdolly et Eztow)
+- Pages d'entreprise (Carrières, Contact, Produits, etc.)
+- Interface moderne et responsive
+- Animations fluides
 
 ## Getting Started
 
