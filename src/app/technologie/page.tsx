@@ -7,11 +7,11 @@ import { motion } from 'framer-motion';
 const TechnologyPage = () => {
   const stackComponents = [
     {
-      category: 'Perception',
-      content: 'Fusion de données multi-capteurs (LiDAR, caméras, radars) pour une compréhension complète de l\'environnement en temps réel.',
+      category: 'Détection',
+      content: 'Fusion intelligente de données LiDAR pour identifier le terrain, détecter les obstacles et analyser la scène en 3D en temps réel.',
       icon: Eye,
-      id: 'perception',
-      details: 'Notre système de perception combine les données de multiples capteurs pour créer une représentation complète et précise de l\'environnement. Les LiDARs fournissent une cartographie 3D précise, les caméras apportent la reconnaissance d\'objets et la compréhension sémantique, tandis que les radars assurent la détection robuste par tous les temps.'
+      id: 'detection',
+      details: 'Détection par fusion de capteurs LiDAR\n\nLe module de détection EZDrive repose sur une architecture avancée de traitement LiDAR. À partir des données brutes issues des capteurs, nous construisons une représentation 3D temps réel de l\'environnement autour du véhicule :\n\nLidar Drivers : communication réseau avec les capteurs LiDAR et conversion des signaux en nuages de points exploitables.\n\nLidar Processing : nettoyage et traitement des données (filtrage des faux positifs, compensation du mouvement, transformation cartésienne...).\n\nFusion sur grille 3D : toutes les observations sont fusionnées dans une grille spatiale pour estimer le terrain, détecter les obstacles, et évaluer la visibilité de chaque zone.\n\nDOGM (Dynamic Occupancy Grid Map) : un algorithme probabiliste enrichit la grille avec des estimations de mouvement et de probabilité d\'occupation.\n\nCe pipeline fournit une carte d\'occupation dynamique haute résolution, indispensable à la navigation autonome et à l\'analyse de scènes complexes comme le repérage de structures mobiles (remorques, conteneurs...).'
     },
     {
       category: 'Localisation',
